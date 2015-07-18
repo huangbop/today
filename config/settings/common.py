@@ -97,9 +97,18 @@ MANAGERS = ADMINS
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
+# [client]
+# database = NAME
+# user = USER
+# password = PASSWORD
+# default-character-set = utf8
 DATABASES = {
-    # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    'default': env.db("DATABASE_URL", default="postgres://localhost/today"),
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '~/django_my.cnf',
+        },
+    }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
