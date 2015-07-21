@@ -14,16 +14,6 @@
     <![endif]-->
 
     {% block css %}
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-    <!-- Your stuff: Third-party css libraries go here -->
-
-    <!-- This file store project specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endblock %}
 
     {% block angular %}
@@ -33,7 +23,7 @@
   </head>
 
   <body>
-
+    {% block body %}
     <div class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -98,6 +88,7 @@
       <!-- place project specific Javascript in this file -->
       <script src="{% static 'js/project.js' %}"></script>
     {% endblock javascript %}
+    {% endblock body %}
   </body>
 </html>
  
