@@ -5,4 +5,4 @@ from snippets.serilizers import SnippetSerializer
 
 class SnippetViewSet(viewsets.ModelViewSet):
     queryset = Snippet.objects.all()
-    serilizer_class = SnippetSerializer
+    serializer_class = SnippetSerializer
