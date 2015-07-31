@@ -3,12 +3,13 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from snippets.models import Snippet
 from snippets.serilizers import SnippetSerializer, UserSerializer, GroupSerializer
+from snippets.permissions import IsOwnerOrReadOnly
 
 
 class SnippetViewSet(viewsets.ModelViewSet):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly,)
 
 
 class UserViewSet(viewsets.ModelViewSet):
