@@ -4,7 +4,7 @@ from snippets.models import Snippet
 
 
 class SnippetSerializer(serializers.ModelSerializer):
-    owner = serializers.CharField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Snippet
 
