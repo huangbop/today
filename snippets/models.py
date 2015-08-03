@@ -1,4 +1,5 @@
 from django.db import models
+from stdimage.models import StdImageField
 
 
 class Snippet(models.Model):
@@ -6,7 +7,7 @@ class Snippet(models.Model):
     text = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey('auth.User', related_name='snippets', null=True)
-
+    image = StdImageField(upload_to='~', null=True)
 
     class Meta:
         ordering = ('-created',)
