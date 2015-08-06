@@ -22,33 +22,21 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <header class="header">
             <div class="container">
-                <header class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </header>
-                <div class="navbar-collapse collapse pull-right">
-                    <ul class="nav nav-pills">
-                        <li role="presentation" class="active"><a href="#">Home</a></li>
-                        <li role="presentation"><a href="#">About</a></li>
-                        <li role="presentation"><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+                <h1 class="logo pull-left">
+                    <img class="logo-image" src="{% static "images/logo.png" %}">
+                    <span class="logo-title">Mixi</span>
+                </h1>
             </div>
-        </nav>
-
+        </header>
         {% block content %}
         {% endblock %}
 
         <!-- <hr class="featurette-divider"> -->
         <footer class="footer">
             <div class="container">
-                <small class="copyright pull-left">Copyright &copy; 2015 MIXI</small>
+                <small class="copyright pull-left">Copyright &copy; 2015 <a href="#">MIXI</a></small>
             </div>
         </footer>
 
