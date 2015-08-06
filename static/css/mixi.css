@@ -106,3 +106,40 @@ a:focus {
 .footer .copyright a {
     color: #50b090;
 }
+
+/* ======= Promo Section ======= */
+.promo {
+  background-color: #56bc94;
+  color: #fff;
+}
+.promo .container {
+  padding-bottom: 15px;
+}
+.promo .overview {
+  margin-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.promo .overview h3 {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.promo .android {
+  position: relative;
+}
+.promo .android .android-holder {
+  position: relative;
+  width: 320px;
+  height: 600px;
+  background-image: url('../images/nexus5.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.promo .android .android-holder-inner {
+  position: absolute;
+  width: 254px;
+  height: 450px;
+  left: 35px;
+  top: 72px;
+}
