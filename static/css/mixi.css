@@ -1,9 +1,25 @@
 
 
+body {
+    font-family: 'Lato', arial, sans-serif;
+    color: #505050;
+}
+a {
+    color: #56bc94;
+}
+a:hover {
+    text-decoration: none;
+    color: #3fa07a;
+}
+a:focus {
+    text-decoration: none;
+    color: #3fa07a;
+}
+
 /* ======= Header ======= */
 .header {
   padding: 15px 0;
-  background: #00ffff;
+  background: #ffffff;
 }
 .header h1.logo {
   margin-top: 0;
@@ -13,7 +29,10 @@
   font-size: 28px;
   max-height: 50px;
 }
-.header h1.logo img {
+.header h1.logo a {
+    color: #505050;
+}
+.header h1.logo a img {
   margin-right: 5px;
   max-height: 50px;
 }
@@ -39,7 +58,7 @@
   background-color: #fff;
 }
 .header .main-nav .nav .nav-item {
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
   margin-right: 5px;
 }
@@ -85,5 +104,5 @@
     color: #a0a0a0;
 }
 .footer .copyright a {
-    color: #4682b4;
+    color: #50b090;
 }
