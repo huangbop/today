@@ -1,0 +1,35 @@
+{% extends "__base.html" %}
+{% load static %}
+
+{% block title %}Mixi{% endblock %}
+
+{% block content %}
+<section class="promo section">
+    <div class="container">
+        <div class="row">
+            <div class="overview col-md-8 col-sm-12 col-xs-12">
+                <h3 class="title">Scan the QR codes</h3>
+                <div class="row">
+                    <div class="item col-md-6 col-sm-6">
+                        <img src="{% static "images/qr-android.png" %}" alt="android">
+                        <p></p>
+                        <p>Download for Android</p>
+                    </div>
+                    <div class="item col-md-6 col-sm-6">
+                        <img src="{% static "images/qr-android.png" %}" alt="ios">
+                        <p></p>
+                        <p>Download for iOS</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="phone android col-md-4 col-sm-12 col-xs-12">
+                <div class="android-holder phone-holder">
+                    <div class="android-holder-inner">
+                        <img src="{% static "images/slide-1.png" %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}
