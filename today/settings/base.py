@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'api',
     'main',
     'snippets',
+    'products',
 )
 
 MIDDLEWARE_CLASSES = (
