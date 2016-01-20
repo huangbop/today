@@ -31,9 +31,13 @@
 
 /*  */
 
+body {
+  background-color: #f0f0f0;
+}
+
 .m-b {
-    background-color: #FFF;
-    box-shadow: 0px 1px 1px #c0c0c0;
+  background-color: #FFF;
+  box-shadow: 0px 1px 1px #c0c0c0;
 }
 
 
