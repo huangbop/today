@@ -19,14 +19,14 @@ TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # Note: This key only used for development and testing.
-SECRET_KEY = env("DJANGO_SECRET_KEY", default='=7u85cbo_f$a*scbe@g!==+i+qa=juy%__nwckmrx%esfrd06$')
+SECRET_KEY = env("DJANGO_SECRET_KEY", default='z=aks29ac05%do_d@+r_zjg+xhr5a^a8x7ztfe%_1y^uwhpnr=')
 
 # Mail settings
 # ------------------------------------------------------------------------------
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
-# EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
-#                     default='django.core.mail.backends.console.EmailBackend')
+EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
+                    default='django.core.mail.backends.console.EmailBackend')
 
 # CACHING
 # ------------------------------------------------------------------------------
