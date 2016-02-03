@@ -10,4 +10,5 @@ export DJANGO_MAILGUN_SERVER_NAME='XXX'
 
 export DATABASE_URL='postgres://postgres:XXX@localhost:/today'
 
+export DJANGO_ALLOWED_HOSTS=XXX,XXX
 export DJANGO_ADMIN_URL='XXX'
