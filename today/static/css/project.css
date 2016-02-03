@@ -65,6 +65,10 @@ body {
   color: #cd2000;
 }
 
+.c-sign-login {
+  margin: 5%;
+}
+
 /* Display django-debug-toolbar.
    See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
    and https://github.com/pydanny/cookiecutter-django/issues/317
