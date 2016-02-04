@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'today.users',  # custom users app
     # Your stuff: custom apps go here
+    'today.nails',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
