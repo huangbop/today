@@ -46,6 +46,7 @@ LOCAL_APPS = (
     'today.users',  # custom users app
     # Your stuff: custom apps go here
     'today.nails',
+    'today.polls',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
