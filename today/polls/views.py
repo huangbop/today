@@ -33,6 +33,7 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 
+
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
@@ -44,3 +45,9 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(question.id, )))
+
+
+def what_the_time(request):
+    now = timezone.now()
+    html = "<html><h1>It is now %s.</h1></html>" % now
+    return HttpResponse(html)
