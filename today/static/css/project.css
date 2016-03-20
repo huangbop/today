@@ -66,8 +66,24 @@ body {
 }
 
 .c-sign-login {
-  margin: 5%;
+
 }
+
+.content {
+  min-height: 600px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer {
+  text-align: center;
+  font-size: x-small;
+  margin: 0 auto;
+  clear: both;
+  margin-top: 30px;
+  width: 100%;
+}
+
 
 /* Display django-debug-toolbar.
    See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
