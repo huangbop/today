@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+from today.users.models import User
+
+class Article(models.Model):
+    titile = models.CharField(max_length=100)
+    content = models.TextField()
+    user = models.ForeignKey(User)

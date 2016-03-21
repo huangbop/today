@@ -23,6 +23,8 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     url(r'^polls/', include('today.polls.urls', namespace='polls')),
 
+    url(r'^articles/', include('today.articles.urls', namespace='articles')),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

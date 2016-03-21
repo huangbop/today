@@ -49,6 +49,7 @@ LOCAL_APPS = (
     'today.nails',
     'today.polls',
     'today.blog',
+    'today.articles',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
