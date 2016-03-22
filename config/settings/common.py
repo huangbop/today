@@ -36,20 +36,20 @@ DJANGO_APPS = (
 )
 THIRD_PARTY_APPS = (
     'crispy_forms',  # Form layouts
-    'allauth',  # registration
-    'allauth.account',  # registration
-    'allauth.socialaccount',  # registration
+    # 'allauth',  # registration
+    # 'allauth.account',  # registration
+    # 'allauth.socialaccount',  # registration
     # 'allauth.socialaccount.providers.google',
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'today.users',  # custom users app
-    # Your stuff: custom apps go here
-    'today.nails',
-    'today.polls',
-    'today.blog',
-    'today.articles',
+    # # Your stuff: custom apps go here
+    # 'today.nails',
+    # 'today.polls',
+    # 'today.blog',
+    # 'today.articles',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -224,8 +224,8 @@ ACCOUNT_ALLOW_REGISTRATION = True
 # Custom user app defaults
 # Select the correct user model
 AUTH_USER_MODEL = 'users.User'
-LOGIN_REDIRECT_URL = 'users:redirect'
-LOGIN_URL = 'account_login'
+# LOGIN_REDIRECT_URL = 'users:redirect'
+# LOGIN_URL = 'account_login'
 
 # SLUGLIFIER
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'

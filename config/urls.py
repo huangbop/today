@@ -16,14 +16,14 @@ urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, include(admin.site.urls)),
 
-    # User management
-    url(r'^users/', include("today.users.urls", namespace="users")),
-    url(r'^accounts/', include('allauth.urls')),
+    # # User management
+    # url(r'^users/', include("today.users.urls", namespace="users")),
+    # url(r'^accounts/', include('allauth.urls')),
 
-    # Your stuff: custom urls includes go here
-    url(r'^polls/', include('today.polls.urls', namespace='polls')),
+    # # Your stuff: custom urls includes go here
+    # url(r'^polls/', include('today.polls.urls', namespace='polls')),
 
-    url(r'^articles/', include('today.articles.urls', namespace='articles')),
+    # url(r'^articles/', include('today.articles.urls', namespace='articles')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
