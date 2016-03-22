@@ -3,5 +3,15 @@
 
 {% block content %}
 
-  article_list.html
+  <div class="content-container">
+    <div class="container">
+      <div class="list-group">
+        {% for article in article_list %}
+          <a href="{% url 'articles:detail' article.id %}">{{ article.title }}</a>
+          <br>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
