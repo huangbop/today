@@ -28,6 +28,9 @@ urlpatterns = [
     # DRF
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
+    url(r'^quickstart/', include('today.quickstart.urls', namespace='quickstart')),
+
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

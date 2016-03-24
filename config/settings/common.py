@@ -51,6 +51,7 @@ LOCAL_APPS = (
     'today.polls',
     'today.blog',
     'today.articles',
+    'today.quickstart',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -237,9 +238,9 @@ ADMIN_URL = r'^admin/'
 
 # DRF
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
+
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+        'rest_framework.permissions.IsAdminUser',
+    ],
+    'PAGE_SIZE': 10,
 }
