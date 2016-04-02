@@ -7,9 +7,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from rest_framework import routers
+
+from today.articles.views import ArticleViewSet
+
+
+router = routers.DefaultRouter()
+router.register(r'articles', ArticleViewSet)
 
 
 urlpatterns = [
+    # The pages
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
 
@@ -20,17 +28,12 @@ urlpatterns = [
     url(r'^users/', include("today.users.urls", namespace="users")),
     url(r'^accounts/', include('allauth.urls')),
 
-    # Your stuff: custom urls includes go here
-    url(r'^polls/', include('today.polls.urls', namespace='polls')),
-
-    url(r'^articles/', include('today.articles.urls', namespace='articles')),
-
     # DRF
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/v1/', include(router.urls)),
 
-    url(r'^quickstart/', include('today.quickstart.urls', namespace='quickstart')),
-
-
+    # Works
+    url(r'^articles/', include('today.articles.urls', namespace='articles')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
