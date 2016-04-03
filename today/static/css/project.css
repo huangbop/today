@@ -48,9 +48,21 @@ body {
   box-shadow: 0px 1px 0px 0px #c0c0c0;
 }
 
+.navbar-brand {
+  color: #505050;
+  font-weight: bold;
+}
+.navbar-brand:hover { color: #c80000; }
+.navbar-brand:active { color: #c80000; }
+
 .left-nav-item {
   margin-left: 40px;
 }
+
+.nav-link {color: #505050;}
+.nav-link:hover { color: #c80000; }
+.nav-link:active { color: #c80000; }
+
 
 /* Misc */
 .center-text {
