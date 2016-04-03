@@ -45,6 +45,7 @@ body {
 /* The navbar */
 .top-menu {
   background-color: #FFF;
+  box-shadow: 0px 1px 0px 0px #c0c0c0;
 }
 
 .left-nav-item {
