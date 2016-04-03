@@ -51,18 +51,27 @@ body {
 .navbar-brand {
   color: #505050;
   font-weight: bold;
+  /* padding-right: 50px; */
 }
 .navbar-brand:hover { color: #c80000; }
 .navbar-brand:active { color: #c80000; }
 
-.left-nav-item {
-  margin-left: 40px;
+.nav-item {
+  padding-left: 30px;
 }
 
 .nav-link {color: #505050;}
 .nav-link:hover { color: #c80000; }
 .nav-link:active { color: #c80000; }
 
+/* Sign & login */
+.net-form {
+  margin-top: 10px;
+}
+
+.go-register {
+  margin-left: 20px;
+}
 
 /* Misc */
 .center-text {

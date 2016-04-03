@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/v1/', include(router.urls)),
 
-    # Works
+    # The works
     url(r'^articles/', include('today.articles.urls', namespace='articles')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
