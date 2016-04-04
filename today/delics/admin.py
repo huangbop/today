@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Delic
+
+
+class DelicAdmin(admin.ModelAdmin):
+    model = Delic
+
+
+admin.site.register(Delic, DelicAdmin)

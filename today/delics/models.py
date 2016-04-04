@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+from today.users.models import User
+
+
+class Delic(models.Model):
+    user = models.ForeignKey(User)
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    pub_date = models.DateTimeField(auto_now=True)

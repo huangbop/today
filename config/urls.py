@@ -34,6 +34,7 @@ urlpatterns = [
 
     # The works
     url(r'^articles/', include('today.articles.urls', namespace='articles')),
+    url(r'^delics/', include('today.delics.urls', namespace='delics')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
