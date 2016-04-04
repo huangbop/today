@@ -1,14 +1,31 @@
-
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
 {% block content %}
+  <div class="container c-container">
+    <div class="row">
+      {% for delic in delic_list %}
+        <div class="col-md-6 bg-frame">
+          <div class="nice-box">
+            <div class="box-above">
+              <div class="box-img">
+                <img class="the-img" src="{% static 'images/delics-default.jpg' %}">
+              </div>
+              <div class=" box-text">
+                <div class="box-title">{{ delic.title }}</div>
+                <div class="box-content">{{ delic.content }}</div>
+              </div>
 
-  {% for delic in delic_list %}
-    <div class="nice-box">
-      <p>{{ delic.title }}</p>
-      <p>{{ delic.content }}</p>
+            </div>
+            <div class="box-bottom">
+              <hr class="box-hr">
+              <p>赞</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-
+  </div>
 
 {% endblock %}

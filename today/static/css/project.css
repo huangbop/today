@@ -73,13 +73,57 @@ body {
   margin-left: 20px;
 }
 
-/* Misc */
-.center-text {
-  text-align: center;
+/* Content */
+.c-container {
+  margin-top: 20px;
+}
+
+.bg-frame {
+  background-color: rgba(0,0,0,0);
+  padding: 5px 30px;
 }
 
 .nice-box {
-  max-width: 50%;
-  min-height: 50px;
-  background-color: gray;
+  background-color: white;
+  box-shadow: 1px 1px 1px 0px #b8b8b8;
+  border-radius: 5px;
+}
+
+.box-above {
+
+}
+
+.box-bottom {
+  clear: both;
+}
+
+.box-img {
+  float: left;
+  padding: 10px 20px;
+}
+
+.the-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.box-text {
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.box-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.box-content {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* Misc */
+.center-text {
+  text-align: center;
 }
