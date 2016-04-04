@@ -15,12 +15,14 @@
               <div class=" box-text">
                 <div class="box-title">{{ delic.title }}</div>
                 <div class="box-content">{{ delic.content }}</div>
+                <p>
+                <div class="box-price">¥ {{ delic.price }}</div>
               </div>
-
             </div>
+            <hr>
             <div class="box-bottom">
-              <hr class="box-hr">
-              <p>赞</p>
+              <a href="#"><img class="box-avatar" src="{% static 'images/avatar-default.jpg' %}">
+                <span class="box-user">{{ delic.user }}</span></a>
             </div>
           </div>
         </div>

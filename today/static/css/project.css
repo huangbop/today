@@ -93,10 +93,6 @@ body {
 
 }
 
-.box-bottom {
-  clear: both;
-}
-
 .box-img {
   float: left;
   padding: 10px 20px;
@@ -121,6 +117,39 @@ body {
 .box-content {
   margin-top: 5px;
   font-size: 12px;
+}
+
+.box-price {
+  font-size: 12px;
+  color: #d80000;
+}
+
+.nice-box hr {
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.box-bottom {
+  padding-bottom: 10px;
+}
+
+.box-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dadada;
+}
+
+.box-user {
+  color: #505050;
+  font-weight: bold;
+}
+
+.box-bottom a {
+  text-decoration: none;
 }
 
 /* Misc */
