@@ -1,2 +1,14 @@
 
-xxx
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% for delic in delic_list %}
+    <div class="nice-box">
+      <p>{{ delic.title }}</p>
+      <p>{{ delic.content }}</p>
+    </div>
+  {% endfor %}
+
+
+{% endblock %}

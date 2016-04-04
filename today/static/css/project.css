@@ -77,3 +77,9 @@ body {
 .center-text {
   text-align: center;
 }
+
+.nice-box {
+  max-width: 50%;
+  min-height: 50px;
+  background-color: gray;
+}
