@@ -1,7 +1,8 @@
 <!doctype html>
-<html ng-app ng-controller="myCtrl">
+<html lang="en" ng-app="contactsMgr" ng-controller="myCtrl">
 
   <head>
+    <meta charset="utf-8">
     <title>Angualr tutorial</title>
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -39,34 +40,45 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
+          <h3>Currency</h3>
 
-          <div class="row">
-            <div class="col-md-12">
-            <button ng-click="clickMe()" >Click Me</button>
+          {{12345 | currency:'£'}}
 
-            <div ng-hide="isHidden">
-            Click the button above to toggle.
-              </div>
+          <h3>Number</h3>
 
-            <ul>
-            <li ng-repeat="contact in contacts">
-            {{contact.name}} - {{contact.phone}}
-                </li>
-              </ul>
+          {{12345.225 | number:2}}
 
-            <label><input type="checkbox" ng-model="center"> text-center</label>
-            <label><input type="checkbox" ng-model="error"> text-danger</label>
-            <label><input type="checkbox" ng-model="styler"> ng-style</label>
+          <h3>limitTo</h3>
 
-            <p ng-class="{'text-center': center, 'text-danger': error}" ng-style="setStyle()">
-            Lorem ipsum dolor sit amet
-              </p>
+          {{'Lorem ipsum dolor sit amet' | limitTo:10}}
 
-            <div ng-init="test = 'Hello, World'"></div>
-            {{test}}
+          <h3>Date</h3>
 
-            </div>
-          </div>
+          {{725508723000 | date:'dd/MM/yyyy'}}<br>
+          {{725508723000 | date:'medium'}}<br>
+          {{725508723000 | date:"h 'in the morning'"}}<br>
+          {{725508723000 | date:"h 'o''clock'"}}
+
+          <h3>Lowercase &amp; Uppercase</h3>
+          {{'Stephen' | lowercase}}<br>
+          {{'Declan' | uppercase}}
+
+          <h3>Filter &amp; orderBy</h3>
+
+          <input type="text" ng-model="searchx.name">
+
+          <ul>
+            <li ng-repeat="contact in contacts | filter:searchx | orderBy:'name':true">
+              {{contact.name}} - {{contact.phone}}
+            </li>
+          </ul>
+
+          <h3>Json</h3>
+          {{contacts | json}}
+
+          <h3>Truncate</h3>
+
+          {{'Lorem ipsum dolor sit amet' | truncate:15}}
 
         </div>
         <div class="col-md-6">
