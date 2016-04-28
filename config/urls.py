@@ -10,10 +10,12 @@ from django.views import defaults as default_views
 from rest_framework import routers
 
 from today.articles.views import ArticleViewSet
+from today.flowers.views import FlowerViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'articles', ArticleViewSet)
+router.register(r'flowers', FlowerViewSet)
 
 
 urlpatterns = [

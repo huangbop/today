@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Flower
+from .serializers import FlowerSerializer
+
+
+
+class FlowerViewSet(viewsets.ModelViewSet):
+    queryset = Flower.objects.all()
+    serializer_class = FlowerSerializer
+
