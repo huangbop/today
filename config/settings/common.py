@@ -41,6 +41,7 @@ THIRD_PARTY_APPS = (
     'allauth.socialaccount',  # registration
     # 'allauth.socialaccount.providers.google',
     'rest_framework',
+    'rest_framework.authtoken',
 )
 
 # Apps specific for this project go here.
@@ -236,9 +237,15 @@ ADMIN_URL = r'^admin/'
 
 # DRF
 REST_FRAMEWORK = {
+     'DEFAULT_AUTHENTICATION_CLASSES': (
+         'rest_framework.authentication.BasicAuthentication',
+         'rest_framework.authentication.SessionAuthentication',
+         'rest_framework.authentication.TokenAuthentication',
+     ),
 
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ],
+
     'PAGE_SIZE': 10,
 }
