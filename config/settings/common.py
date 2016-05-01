@@ -48,8 +48,6 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'today.users',  # custom users app
     # Your stuff: custom apps go here
-    'today.articles',
-    'today.delics',
     'today.flowers',
 )
 

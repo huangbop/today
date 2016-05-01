@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+  <div class="container">
+    <p>
+      {% for flower in flower_list %}
+        <div class="nice-box">
+          <p>{{ flower.title }}</p>
+          <p>{{ flower.description }}</p>
+        </div>
+      {% endfor %}
+  </div>
+
+{% endblock %}

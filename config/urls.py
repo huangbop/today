@@ -9,12 +9,10 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from rest_framework import routers
 
-from today.articles.views import ArticleViewSet
 from today.flowers.views import FlowerViewSet
 
 
 router = routers.DefaultRouter()
-router.register(r'articles', ArticleViewSet)
 router.register(r'flowers', FlowerViewSet)
 
 
@@ -35,8 +33,7 @@ urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
 
     # The works
-    url(r'^articles/', include('today.articles.urls', namespace='articles')),
-    url(r'^delics/', include('today.delics.urls', namespace='delics')),
+    url(r'^flowers/', include('today.flowers.urls', namespace='flowers')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
