@@ -19,4 +19,4 @@ export DJANGO_ADMIN_URL='XXX'
 
 cd /home/projects/today
 source ~/.virutalenvs/today/bin/activate
-exec ~/.virtualenvs/today/bin/gunicorn -w 3 -b 0.0.0.0:8001 config.wsgi
+exec ~/.virtualenvs/today/bin/gunicorn -w 3 config.wsgi
