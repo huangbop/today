@@ -31,8 +31,9 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/v1/', include(router.urls)),
 
-    # Account management
-    url(r'^accounts/', include('allauth.urls')),
+    # REST auth
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
 
     # The works
     url(r'^flowers/', include('today.flowers.urls', namespace='flowers')),

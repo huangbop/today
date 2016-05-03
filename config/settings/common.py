@@ -41,6 +41,8 @@ THIRD_PARTY_APPS = (
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'rest_auth',
+    'rest_auth.registration',
 )
 
 # Apps specific for this project go here.
