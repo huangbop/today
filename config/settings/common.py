@@ -38,6 +38,9 @@ THIRD_PARTY_APPS = (
     'crispy_forms',  # Form layouts
     'rest_framework',
     'rest_framework.authtoken',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 )
 
 # Apps specific for this project go here.
@@ -204,7 +207,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # ------------------------------------------------------------------------------
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-
+    'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 # Some really nice defaults
