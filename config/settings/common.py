@@ -36,10 +36,6 @@ DJANGO_APPS = (
 )
 THIRD_PARTY_APPS = (
     'crispy_forms',  # Form layouts
-    'allauth',  # registration
-    'allauth.account',  # registration
-    'allauth.socialaccount',  # registration
-    # 'allauth.socialaccount.providers.google',
     'rest_framework',
     'rest_framework.authtoken',
 )
@@ -208,23 +204,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # ------------------------------------------------------------------------------
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+
 )
 
 # Some really nice defaults
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_ADAPTER = 'today.users.adapter.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = 'today.users.adapter.SocialAccountAdapter'
-ACCOUNT_ALLOW_REGISTRATION = True
+
 
 # Custom user app defaults
 # Select the correct user model
 AUTH_USER_MODEL = 'users.User'
 LOGIN_REDIRECT_URL = 'users:redirect'
-LOGIN_URL = 'account_login'
+
 
 # SLUGLIFIER
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'

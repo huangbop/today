@@ -26,7 +26,6 @@ urlpatterns = [
 
     # User management
     url(r'^users/', include("today.users.urls", namespace="users")),
-    url(r'^accounts/', include('allauth.urls')),
 
     # DRF
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
