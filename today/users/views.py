@@ -50,4 +50,4 @@ class UserListView(LoginRequiredMixin, ListView):
 
 
 def angular_login(request):
-    return render(request, 'users/login.html')
+    return render(request, 'users/user_login.html')
