@@ -213,6 +213,7 @@ AUTHENTICATION_BACKENDS = (
 # Some really nice defaults
 
 
+
 # Custom user app defaults
 # Select the correct user model
 AUTH_USER_MODEL = 'users.User'
