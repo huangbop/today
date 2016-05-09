@@ -211,7 +211,9 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Some really nice defaults
-
+ACCOUNT_FORMS = {
+    'login': 'today.users.forms.UserLoginForm',
+}
 
 
 # Custom user app defaults
